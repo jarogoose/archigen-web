@@ -1,0 +1,7 @@
+{
+  "name": "archigen-ui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
