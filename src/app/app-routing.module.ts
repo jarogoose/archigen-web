@@ -3,6 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'feature-creator',
+    pathMatch: 'full',
+  },
+  {
     path: 'feature-creator',
     loadChildren: () =>
       import('./feature-creator/feature-creator.module').then(
@@ -10,9 +15,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: '',
-    redirectTo: 'feature-creator',
-    pathMatch: 'full',
+    path: 'configs',
+    loadChildren: () =>
+      import('./configs/configs.module').then((m) => m.ConfigsPageModule),
   },
 ];
 
