@@ -6,5 +6,27 @@
     <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content> </ion-content>
+<ion-content class="ion-padding">
+  <ion-card class="ion-padding" color="tertiary">
+    <ion-card-header>
+      <ion-card-title>Configs</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Artefact</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Project</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Root Directory</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-button color="primary" shape="round">SAVE</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
