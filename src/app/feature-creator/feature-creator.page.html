@@ -7,4 +7,50 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content class="ion-padding">
+  <ion-accordion-group [multiple]="true">
+    <ion-accordion class="ion-padding">
+      <ion-item slot="header" color="primary">
+        <ion-label>Feature Base</ion-label>
+      </ion-item>
+
+      <ion-list slot="content" class="ion-padding">
+        <ion-item>
+          <ion-label position="floating">Feature</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item slot="content">
+          <ion-label position="floating">Root</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <ion-accordion class="ion-padding">
+      <ion-item slot="header" color="primary">
+        <ion-label>Domain Data</ion-label>
+      </ion-item>
+
+      <ion-list slot="content" class="ion-padding">
+        <ion-item>
+          <ion-label position="floating">Feature</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item slot="content">
+          <ion-label position="floating">Root</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <ion-accordion class="ion-padding">
+      <ion-item slot="header" color="primary">
+        <ion-label>Api</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <ion-button class="ion-padding" color="success">GENERATE</ion-button>
+</ion-content>
