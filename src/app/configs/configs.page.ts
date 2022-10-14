@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SaveConfigsRequest } from './configs.model';
+import { Configs, SaveConfigsRequest } from './configs.model';
 import { ConfigsService } from './configs.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { ConfigsService } from './configs.service';
 })
 export class ConfigsPage implements OnInit {
   configForm = {} as FormGroup;
+  configList = [] as Configs[];
 
   constructor(
     private configsService: ConfigsService,
@@ -24,6 +25,7 @@ export class ConfigsPage implements OnInit {
       baseDir: this.fb.control('', Validators.required),
       author: this.fb.control('', Validators.required),
     });
+    this.onLoadAllConfigs();
   }
 
   onConfigsSave() {
@@ -35,5 +37,12 @@ export class ConfigsPage implements OnInit {
       author: this.configForm.value.author,
     };
     this.configsService.saveConfigs(config);
+  }
+
+  onLoadAllConfigs() {
+    this.configsService.loadAllConfigs().subscribe((response) => {
+      console.log(response);
+      this.configList = response.configList;
+    });
   }
 }

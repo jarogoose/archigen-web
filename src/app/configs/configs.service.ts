@@ -1,7 +1,11 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SaveConfigsRequest } from './configs.model';
+import {
+  Configs,
+  LoadAllConfigsResponse,
+  SaveConfigsRequest,
+} from './configs.model';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +22,15 @@ export class ConfigsService {
   constructor(private http: HttpClient) {}
 
   saveConfigs(config: SaveConfigsRequest) {
-    this.http.post(`${this.BASE_URL}/save-configs`, config, this.httpOptions).subscribe();
+    this.http
+      .post(`${this.BASE_URL}/save-configs`, config, this.httpOptions)
+      .subscribe();
+  }
+
+  loadAllConfigs() {
+    return this.http.get<LoadAllConfigsResponse>(
+      `${this.BASE_URL}/load-all-configs`,
+      this.httpOptions
+    );
   }
 }

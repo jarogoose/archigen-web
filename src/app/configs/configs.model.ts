@@ -14,3 +14,7 @@ export interface SaveConfigsRequest {
   baseDir: string;
   author: string;
 }
+
+export interface LoadAllConfigsResponse {
+  configList: Configs[];
+}
