@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ConfigsPageRoutingModule } from './configs-routing.module';
 
 import { ConfigsPage } from './configs.page';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ConfigsPage } from './configs.page';
     ReactiveFormsModule,
     ConfigsPageRoutingModule,
   ],
-  declarations: [ConfigsPage],
+  declarations: [ConfigsPage, EditorComponent],
 })
 export class ConfigsPageModule {}

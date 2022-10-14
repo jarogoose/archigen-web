@@ -11,72 +11,7 @@
   <ion-grid>
     <ion-row>
       <ion-col offset="2" size="8">
-        <ion-card class="ion-padding" color="tertiary">
-          <ion-card-header>
-            <ion-card-title>Configs</ion-card-title>
-          </ion-card-header>
-          <ion-grid>
-            <ion-row>
-              <ion-col offset="1" size="10">
-                <!-- CONFIG FORM -->
-                <form [formGroup]="configForm">
-                  <ion-card-content>
-                    <!-- NAME -->
-                    <ion-item>
-                      <ion-label position="floating">Name</ion-label>
-                      <ion-input
-                        formControlName="projectName"
-                        clear-input
-                      ></ion-input>
-                    </ion-item>
-                    <!-- ARTEFACT -->
-                    <ion-item>
-                      <ion-label position="floating">Artefact</ion-label>
-                      <ion-input
-                        formControlName="artefact"
-                        clear-input
-                      ></ion-input>
-                    </ion-item>
-                    <!-- PROJECT -->
-                    <ion-item>
-                      <ion-label position="floating">Project</ion-label>
-                      <ion-input
-                        formControlName="project"
-                        clear-input
-                      ></ion-input>
-                    </ion-item>
-                    <!-- ROOT DIRECTORY -->
-                    <ion-item>
-                      <ion-label position="floating">Root Directory</ion-label>
-                      <ion-input
-                        formControlName="baseDir"
-                        clear-input
-                      ></ion-input>
-                    </ion-item>
-                    <!-- AUTHOR -->
-                    <ion-item>
-                      <ion-label position="floating">Author</ion-label>
-                      <ion-input
-                        formControlName="author"
-                        clear-input
-                      ></ion-input>
-                    </ion-item>
-                    <!-- SAVE BUTTON -->
-                    <ion-item lines="none">
-                      <ion-button
-                        color="primary"
-                        shape="round"
-                        [disabled]="!configForm.valid"
-                        (click)="onConfigsSave()"
-                        >SAVE</ion-button
-                      >
-                    </ion-item>
-                  </ion-card-content>
-                </form>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
+        <arc-configs-editor></arc-configs-editor>
       </ion-col>
     </ion-row>
   </ion-grid>
