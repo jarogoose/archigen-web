@@ -1,5 +1,5 @@
 {
-  "name": "archigen-ui",
+  "name": "archigen-web",
   "integrations": {
     "capacitor": {}
   },

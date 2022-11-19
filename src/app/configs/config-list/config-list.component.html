@@ -1,0 +1,18 @@
+<ion-list>
+  <ion-item color="primary">
+    <ion-label>Name</ion-label>
+    <ion-label>Artefact</ion-label>
+    <ion-label>Project</ion-label>
+    <ion-label>Root Directory</ion-label>
+    <ion-label>Author</ion-label>
+  </ion-item>
+</ion-list>
+<ion-list>
+  <ion-item *ngFor="let config of configList">
+    <ion-label>{{config.projectName}}</ion-label>
+    <ion-label>{{config.artefact}}</ion-label>
+    <ion-label>{{config.project}}</ion-label>
+    <ion-label>{{config.baseDir}}</ion-label>
+    <ion-label>{{config.author}}</ion-label>
+  </ion-item>
+</ion-list>
